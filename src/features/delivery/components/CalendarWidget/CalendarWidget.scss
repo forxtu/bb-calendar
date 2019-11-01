@@ -1,0 +1,37 @@
+@import "~styles/common";
+
+.calendar-widget {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0px 4px 5px 0px #c0bebe;
+    border-radius: 3px;
+  }
+
+  &__description {
+    &-badge {
+      img {
+        padding-right: 6px;
+      }
+
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      background: $green;
+    }
+  }
+
+  &__calendar {
+    &-icon {
+      position: relative;
+    }
+
+    &-date {
+      position: absolute;
+      left: 7px;
+      top: 12px;
+    }
+  }
+}

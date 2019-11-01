@@ -1,0 +1,19 @@
+@import "~styles/common";
+
+.delivery-widget {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $grey;
+    padding: 15px;
+    width: 400px;
+    min-height: 200px;
+  }
+
+  &__description {
+    display: inline;
+    padding: 5px;
+    background: rgb(191, 191, 191);
+  }
+}

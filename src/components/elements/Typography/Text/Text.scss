@@ -1,0 +1,15 @@
+@import "~styles/common";
+
+.text {
+  font-family: $font-family-gtpressura-regular;
+  color: $blue;
+  margin: 0;
+
+  &--regular {
+    font-size: $font-size-p-regular;
+  }
+
+  &--small {
+    font-size: $font-size-p-small;
+  }
+}

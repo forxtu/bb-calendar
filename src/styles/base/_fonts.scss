@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "CooperHewitt-Bold";
+  src: url("~assets/fonts/CooperHewitt-Bold.woff2") format("woff2"),
+    url("~assets/fonts/CooperHewitt-Bold.woff") format("woff"),
+    url("~assets/fonts/CooperHewitt-Bold.eot") format("eot"),
+    url("~assets/fonts/CooperHewitt-Bold.ttf") format("ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "GT-Pressura-Regular";
+  src: url("~assets/fonts/GT-Pressura-Regular.woff2") format("woff2"),
+    url("~assets/fonts/GT-Pressura-Regular.woff") format("woff"),
+    url("~assets/fonts/GT-Pressura-Regular.eot") format("eot"),
+    url("~assets/fonts/GT-Pressura-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "GTPressuraMono";
+  src: url("~assets/fonts/GTPressuraMono.woff2") format("woff2"),
+    url("~assets/fonts/GTPressuraMono.woff") format("woff"),
+    url("~assets/fonts/GTPressuraMono.eot") format("eot"),
+    url("~assets/fonts/GTPressuraMono.ttf") format("ttf");
+}
