@@ -25,13 +25,14 @@
 
   &__calendar {
     &-icon {
+      @include flexCenter;
+
       position: relative;
     }
 
     &-date {
       position: absolute;
-      left: 7px;
-      top: 12px;
+      top: 13px;
     }
   }
 }

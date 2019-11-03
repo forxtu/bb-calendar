@@ -1,0 +1,12 @@
+.calendar {
+  &__week {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+
+    &-day {
+      padding: 15px;
+      text-align: center;
+    }
+  }
+}
