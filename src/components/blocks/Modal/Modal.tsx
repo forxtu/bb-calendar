@@ -1,4 +1,4 @@
-import React, { useRef, ReactChild } from "react";
+import React, { useRef, cloneElement, ReactElement } from "react";
 import ReactDOM from "react-dom";
 
 // hooks
@@ -10,7 +10,7 @@ import "components/blocks/Modal/Modal.scss";
 
 type Modal = {
   isModalOpen: boolean;
-  children: ReactChild;
+  children: ReactElement;
   onClose: () => void;
 };
 
@@ -35,7 +35,7 @@ const Modal = ({ isModalOpen, onClose, children }: Modal) => {
         >
           <div className="modal__overflow" />
           <div ref={modalContentRef} className="modal__content">
-            {children}
+            {cloneElement(children, { handleClose })}
           </div>
         </div>,
         modalNode as HTMLDivElement & null
