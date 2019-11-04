@@ -35,23 +35,23 @@
         height: 1px;
         background: $blue;
         position: absolute;
-      }
 
-      span:first-child {
-        width: 7px;
-        left: 11px;
-        top: 9px;
-      }
+        &:first-child {
+          width: 7px;
+          left: 11px;
+          top: 9px;
+        }
 
-      span:nth-child(2) {
-        width: 10px;
-        left: 8px;
-        top: 12px;
-      }
+        &:nth-child(2) {
+          width: 10px;
+          left: 8px;
+          top: 12px;
+        }
 
-      span:nth-child(3) {
-        width: 6px;
-        left: 11px;
+        &:nth-child(3) {
+          width: 6px;
+          left: 11px;
+        }
       }
 
       img {
