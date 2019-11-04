@@ -1,44 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🐶 Core
 
-## Available Scripts
+- Bootstrapped with Create React App (using TypeScript)
 
-In the project directory, you can run:
+## 🐱 Styling
 
-### `yarn start`
+- SCSS (BEM methodology)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🐻 Tools
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Prettier
+- tsconfig, tslint
+- yarn
 
-### `yarn test`
+## 🦊 Dependencies
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- _node-sass_ to compile SCSS (dev)
 
-### `yarn build`
+## 🦄 Features
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Modal
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- To open, click the **Delivery** button
+- To close, click the **Cancel** button and the **Confirm** button or click outside the modal content
+- The modal content is mounted and unmounted inside the div element
+- Custom fade-in/out animations use hooks, styles and _onTransitionEnd_ property
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Description
 
-### `yarn eject`
+- I used React context API and refs in order to avoid creating a _div_ element with ID in the _index.html_ file (core/context/ModalProvider)
+- To get _modalNode_ div, use _useContext_ hook and mount it inside the div using _createPortal_ (components/blocks/Modal)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Calendar
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The date picker doesn’t include all months and years
+- The calendar features one month, **Aug 2019**
+- Default date: **1 Aug**
+- Start and end days of the month are set dynamically depending on the month and the year (in this case, it's August 2019, so the first day is Tuesday and the last day is Saturday)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Description
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- I used experimental css syntax to build the calendar - `display: grid;`. I wanted to try it out and found it really awesome. Of course, it can be built with _flex_ or other style.
+- There are 3 states of the date - _activeDate_, _selectedDate_ and _disabled_. _activeDate_ is used to show the currently active date, but if a user discards changes and opens the calendar again, the previously selected date is marked as selected. If after that the user decides to select a new date, it sets the new date as selected.
+- For dates I used the built-in JS (TS) features, but a library like _momentjs_ would be more efficient in production.
