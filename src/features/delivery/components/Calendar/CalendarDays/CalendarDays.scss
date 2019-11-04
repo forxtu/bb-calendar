@@ -1,0 +1,70 @@
+@import "~styles/common";
+
+.calendar {
+  &__days {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    margin-bottom: 20px;
+
+    &-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid $red;
+      padding: 15px;
+      margin: 3px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        background-color: $pink;
+        border-color: $pink;
+      }
+
+      &-text {
+        color: $red;
+        font-family: $font-family-gtpressura-mono;
+      }
+
+      &--disabled {
+        background: $grey-dark;
+        border-color: transparent;
+        pointer-events: none;
+
+        p {
+          color: $grey-darker;
+        }
+      }
+
+      &--selected {
+        background: $red !important;
+        border-color: transparent;
+
+        p {
+          color: $white;
+        }
+      }
+
+      &--start-1 {
+        grid-column-start: 1;
+      }
+      &--start-2 {
+        grid-column-start: 2;
+      }
+      &--start-3 {
+        grid-column-start: 3;
+      }
+      &--start-4 {
+        grid-column-start: 4;
+      }
+      &--start-5 {
+        grid-column-start: 5;
+      }
+      &--start-6 {
+        grid-column-start: 6;
+      }
+      &--start-7 {
+        grid-column-start: 7;
+      }
+    }
+  }
+}

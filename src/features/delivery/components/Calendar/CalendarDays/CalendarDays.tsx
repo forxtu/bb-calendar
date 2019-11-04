@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Text from "components/elements/Typography/Text";
 
 // styles
-import "features/delivery/components/Calendar/CalendarWeek/CalendarWeek.scss";
+import "features/delivery/components/Calendar/CalendarDays/CalendarDays.scss";
 
 type CalendarDays = {
   calendarDays: any[];
@@ -35,9 +35,7 @@ const CalendarDays = ({
           }`}
           onClick={() => setActiveDate(date)}
         >
-          <Text type="small" className="calendar__days-item-text">
-            {day}
-          </Text>
+          <Text className="calendar__days-item-text">{day}</Text>
         </div>
       ))}
     </div>

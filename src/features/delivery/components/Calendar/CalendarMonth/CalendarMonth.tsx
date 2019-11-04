@@ -1,13 +1,13 @@
 import React from "react";
 
 // components
-import Text from "components/elements/Typography/Text";
+import Title from "components/elements/Typography/Title";
 
 // styles
 import "features/delivery/components/Calendar/CalendarMonth/CalendarMonth.scss";
 
 const CalendarMonth = () => (
-  <Text className="calendar__month-title">August 2019</Text>
+  <Title className="calendar__month-title">August 2019</Title>
 );
 
 export default CalendarMonth;

@@ -1,0 +1,109 @@
+@import "~styles/common";
+
+.delivery-day-button {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: #fff;
+    box-shadow: 0px 4px 5px 0px #c0bebe;
+    border-radius: 3px;
+    transition: 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 2px 3px 0px #c0bebe;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &-badge {
+      position: relative;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      padding: 5px 10px 5px 15px;
+      background: $green;
+
+      span {
+        height: 1px;
+        background: $blue;
+        position: absolute;
+      }
+
+      span:first-child {
+        width: 7px;
+        left: 11px;
+        top: 9px;
+      }
+
+      span:nth-child(2) {
+        width: 10px;
+        left: 8px;
+        top: 12px;
+      }
+
+      span:nth-child(3) {
+        width: 6px;
+        left: 11px;
+      }
+
+      img {
+        padding-right: 6px;
+      }
+    }
+  }
+
+  &__calendar {
+    background: rgba(29, 108, 147, 0.25);
+    margin: -35px;
+    padding: 35px 35px 35px 23px;
+    border-radius: 50% 0 0 50%;
+
+    &-icon {
+      @include flexCenter;
+
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    &-date {
+      position: absolute;
+      top: 13px;
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+
+      &-text {
+        border-bottom: 2px solid $blue;
+        padding-bottom: 2px;
+        margin-right: 5px;
+      }
+
+      &::after {
+        border-style: solid;
+        border-width: 2px 2px 0 0;
+        border-color: $blue;
+        content: "";
+        display: inline-block;
+        height: 10px;
+        left: 0;
+        position: relative;
+        top: 0;
+        transform: rotate(-45deg);
+        vertical-align: top;
+        width: 10px;
+        left: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

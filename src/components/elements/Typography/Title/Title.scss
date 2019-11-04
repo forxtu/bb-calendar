@@ -1,7 +1,9 @@
 @import "~styles/common";
 
 .title {
+  font-family: $font-family-cooper-hewitt;
+  font-size: $font-size-h1;
   color: $blue;
   margin: 0;
-  font-family: $font-family-cooper-hewitt;
+  line-height: 45px;
 }

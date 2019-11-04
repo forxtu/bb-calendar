@@ -9,7 +9,7 @@ type CalendarDays = {
   className: string;
 };
 
-const useCalendarWidget = () => {
+const useDeliveryDayButton = () => {
   const [calendarDate, setCalendarDate] = useState(new Date(2019, 7));
   const [calendarDays, setCalendarDays] = useState<CalendarDays[]>([]);
 
@@ -71,4 +71,4 @@ const useCalendarWidget = () => {
   };
 };
 
-export default useCalendarWidget;
+export default useDeliveryDayButton;

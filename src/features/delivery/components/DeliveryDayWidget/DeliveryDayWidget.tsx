@@ -3,7 +3,7 @@ import React from "react";
 // components
 import Title from "components/elements/Typography/Title";
 import Text from "components/elements/Typography/Text";
-import CalendarWidget from "features/delivery/components/CalendarWidget";
+import DeliveryDayButton from "features/delivery/components/DeliveryDayButton";
 
 // styles
 import "features/delivery/components/DeliveryDayWidget/DeliveryDayWidget.scss";
@@ -17,7 +17,7 @@ const DeliveryDayWidget = () => {
           Delivery is always free
         </Text>
       </div>
-      <CalendarWidget />
+      <DeliveryDayButton />
     </div>
   );
 };

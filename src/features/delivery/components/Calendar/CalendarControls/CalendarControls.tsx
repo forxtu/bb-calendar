@@ -6,6 +6,9 @@ import useCalendarControls from "features/delivery/components/Calendar/CalendarC
 // components
 import Button from "components/elements/Button";
 
+// styles
+import "features/delivery/components/Calendar/CalendarControls/CalendarControls.scss";
+
 type CalendarControls = {
   onModalClose: any;
   activeDate: any;
@@ -31,10 +34,13 @@ const CalendarControls = ({
 
   return (
     <div className="calendar__controls">
-      <Button onClick={handleSelectDateCancel} type="link">
-        CANCEL, DON'T CHANGE
+      <Button onClick={handleSelectDateCancel} type="link" size="small">
+        CANCEL, <br />
+        DON'T CHANGE
       </Button>
-      <Button onClick={handleSelectDateConfirm}>CHANGE DATE</Button>
+      <Button size="small" onClick={handleSelectDateConfirm}>
+        CHANGE DATE
+      </Button>
     </div>
   );
 };

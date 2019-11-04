@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // hooks
-import useCalendarWidget from "features/delivery/components/CalendarWidget/useCalendarWidget";
+import useDeliveryDayButton from "features/delivery/components/DeliveryDayButton/useDeliveryDayButton";
 
 // components
 import Text from "components/elements/Typography/Text";
@@ -9,11 +9,11 @@ import Modal from "components/blocks/Modal";
 import Calendar from "features/delivery/components/Calendar";
 
 // styles
-import "features/delivery/components/CalendarWidget/CalendarWidget.scss";
+import "features/delivery/components/DeliveryDayButton/DeliveryDayButton.scss";
 import van from "assets/images/van.svg";
 import calendar from "assets/images/calendar.svg";
 
-const CalendarWidget = () => {
+const DeliveryDayButton = () => {
   const {
     calendarDays,
     selectedDate,
@@ -21,31 +21,36 @@ const CalendarWidget = () => {
     activeDate,
     setActiveDate,
     formattedDateTitle
-  } = useCalendarWidget();
+  } = useDeliveryDayButton();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="calendar-widget__wrapper">
-      <div className="calendar-widget__description">
+    <div
+      className="delivery-day-button__wrapper"
+      onClick={() => setIsModalOpen(true)}
+    >
+      <div className="delivery-day-button__description">
         <Text>{formattedDateTitle}</Text>
-        <Text type="small" className="calendar-widget__description-badge">
+        <Text type="small" className="delivery-day-button__description-badge">
+          <span className="delivery-day-button__icon-line" />
+          <span className="delivery-day-button__icon-line" />
+          <span className="delivery-day-button__icon-line" />
           <img src={van} alt="van" />
           Earliest delivery
         </Text>
       </div>
-      <div className="calendar-widget__calendar">
-        <div className="calendar-widget__calendar-icon">
+      <div className="delivery-day-button__calendar">
+        <div className="delivery-day-button__calendar-icon">
           <img src={calendar} alt="calendar" />
-          <Text type="small" className="calendar-widget__calendar-date">
+          <Text type="small" className="delivery-day-button__calendar-date">
             {selectedDate.getDate()}
           </Text>
         </div>
-        <div
-          className="calendar-widget__calendar-btn"
-          onClick={() => setIsModalOpen(true)}
-        >
-          <Text>Change</Text>
+        <div className="delivery-day-button__calendar-btn">
+          <Text type="small" className="delivery-day-button__calendar-btn-text">
+            Change
+          </Text>
         </div>
 
         {isModalOpen && (
@@ -67,4 +72,4 @@ const CalendarWidget = () => {
   );
 };
 
-export default CalendarWidget;
+export default DeliveryDayButton;

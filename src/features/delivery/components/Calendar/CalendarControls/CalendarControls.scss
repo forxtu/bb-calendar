@@ -1,0 +1,10 @@
+.calendar {
+  &__controls {
+    display: flex;
+    align-items: center;
+
+    button:first-child {
+      margin-right: 15px;
+    }
+  }
+}

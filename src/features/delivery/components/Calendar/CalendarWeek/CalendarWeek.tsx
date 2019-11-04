@@ -19,9 +19,9 @@ const CalendarWeek = () => {
 
   return (
     <div className="calendar__week">
-      {calendarWeek.map(weekDay => (
-        <Text key={weekDay.day} className="calendar__week-day">
-          {weekDay.label}
+      {calendarWeek.map(({ day, label }) => (
+        <Text key={day} className="calendar__week-day">
+          {label}
         </Text>
       ))}
     </div>

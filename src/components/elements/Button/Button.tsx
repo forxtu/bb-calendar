@@ -4,9 +4,11 @@ import React, { CSSProperties } from "react";
 import "components/elements/Button/Button.scss";
 
 type ButtonType = "regular" | "link";
+type ButtonSize = "large" | "regular" | "small";
 
 type ButtonProps = {
   type?: ButtonType;
+  size?: ButtonSize;
   children: any;
   className?: string;
   style?: CSSProperties;
@@ -14,9 +16,19 @@ type ButtonProps = {
   rest?: any;
 };
 
-const Button = ({ type = "regular", children, onClick, rest }: ButtonProps) => {
+const Button = ({
+  type = "regular",
+  size = "regular",
+  children,
+  onClick,
+  rest
+}: ButtonProps) => {
   return (
-    <button onClick={onClick} className={`button button--${type}`} {...rest}>
+    <button
+      onClick={onClick}
+      className={`button button--${type} button-size--${size}`}
+      {...rest}
+    >
       {children}
     </button>
   );

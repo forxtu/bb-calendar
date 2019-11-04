@@ -1,6 +1,9 @@
+@import "~styles/common";
+
 .calendar {
   &__month {
     &-title {
+      font-size: $font-size-p-regular;
     }
   }
 }
