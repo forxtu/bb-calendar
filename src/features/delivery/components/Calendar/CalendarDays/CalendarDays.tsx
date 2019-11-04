@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+
+// utils
+import { CalendarDays as CalendarDaysType } from "features/delivery/components/DeliveryDayButton/useDeliveryDayButton";
 
 // components
 import Text from "components/elements/Typography/Text";
@@ -7,10 +10,10 @@ import Text from "components/elements/Typography/Text";
 import "features/delivery/components/Calendar/CalendarDays/CalendarDays.scss";
 
 type CalendarDays = {
-  calendarDays: any[];
-  selectedDate: any;
-  activeDate: any;
-  setActiveDate: (x: any) => void;
+  calendarDays: CalendarDaysType[];
+  selectedDate: Date;
+  activeDate: Date;
+  setActiveDate: (date: Date) => void;
 };
 
 const CalendarDays = ({

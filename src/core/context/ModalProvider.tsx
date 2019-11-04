@@ -1,9 +1,15 @@
-import React, { useState, useEffect, useRef, createContext } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  createContext,
+  ReactChild
+} from "react";
 
 export const ModalContext = createContext(null);
 
 type ModalProvider = {
-  children: any;
+  children: ReactChild;
 };
 
 const ModalProvider = ({ children }: ModalProvider) => {

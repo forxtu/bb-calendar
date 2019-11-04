@@ -1,5 +1,8 @@
 import React from "react";
 
+// utils
+import { CalendarDays as CalendarDaysType } from "features/delivery/components/DeliveryDayButton/useDeliveryDayButton";
+
 // components
 import CalendarMonth from "features/delivery/components/Calendar/CalendarMonth";
 import CalendarWeek from "features/delivery/components/Calendar/CalendarWeek";
@@ -10,11 +13,11 @@ import CalendarControls from "features/delivery/components/Calendar/CalendarCont
 import "features/delivery/components/Calendar/Calendar.scss";
 
 type Calendar = {
-  calendarDays: any[];
-  selectedDate: any;
-  activeDate: any;
-  setSelectedDate: (x: any) => void;
-  setActiveDate: (x: any) => void;
+  calendarDays: CalendarDaysType[];
+  selectedDate: Date;
+  activeDate: Date;
+  setSelectedDate: (date: Date) => void;
+  setActiveDate: (date: Date) => void;
   handleClose?: () => void;
 };
 

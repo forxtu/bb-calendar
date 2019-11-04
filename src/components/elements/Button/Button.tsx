@@ -13,21 +13,18 @@ type ButtonProps = {
   className?: string;
   style?: CSSProperties;
   onClick?: () => void;
-  rest?: any;
 };
 
 const Button = ({
   type = "regular",
   size = "regular",
   children,
-  onClick,
-  rest
+  onClick
 }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
       className={`button button--${type} button-size--${size}`}
-      {...rest}
     >
       {children}
     </button>

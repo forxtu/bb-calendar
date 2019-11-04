@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 // utils
 import { getDaysInMonth, formatDateTitle } from "utils/dates";
 
-type CalendarDays = {
+export type CalendarDays = {
   day: number;
   date: Date;
   className: string;

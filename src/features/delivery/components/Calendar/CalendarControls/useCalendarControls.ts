@@ -1,12 +1,12 @@
 type UseCalendarControls = {
-  onModalClose: any;
-  activeDate: any;
-  selectedDate: any;
-  setSelectedDate: (x: any) => void;
+  activeDate: Date;
+  selectedDate: Date;
+  setSelectedDate: (date: Date) => void;
+  onModalClose?: () => void;
 };
 
 const useCalendarControls = ({
-  onModalClose,
+  onModalClose = () => {},
   activeDate,
   selectedDate,
   setSelectedDate

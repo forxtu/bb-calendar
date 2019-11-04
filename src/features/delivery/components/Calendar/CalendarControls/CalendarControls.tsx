@@ -10,10 +10,10 @@ import Button from "components/elements/Button";
 import "features/delivery/components/Calendar/CalendarControls/CalendarControls.scss";
 
 type CalendarControls = {
-  onModalClose: any;
-  activeDate: any;
-  selectedDate: any;
-  setSelectedDate: (x: any) => void;
+  activeDate: Date;
+  selectedDate: Date;
+  setSelectedDate: (date: Date) => void;
+  onModalClose?: () => void;
 };
 
 const CalendarControls = ({
