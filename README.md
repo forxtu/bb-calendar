@@ -35,7 +35,7 @@
 - The date picker doesn’t include all months and years
 - The calendar features one month, **Aug 2019**
 - Default date: **1 Aug**
-- Start and end days of the month are set dynamically depending on the month and the year (in this case, it's August 2019, so the first day is Tuesday and the last day is Saturday)
+- Start and end days of the month are set dynamically depending on the month and the year (in this case, it's August 2019, so the first day is Thursday and the last day is Saturday)
 
 #### Description
 
