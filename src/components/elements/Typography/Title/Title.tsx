@@ -12,25 +12,10 @@ type Title = {
   style?: CSSProperties;
 };
 
-const Title = ({ type, children, className = "", style }: Title) => {
-  const types = {
-    h1: "h1"
-  };
-
-  const { h1 } = types;
-
-  const getTitleElement = () => (
-    <h1 style={style} className={`title title--${h1} ${className}`.trim()}>
-      {children}
-    </h1>
-  );
-
-  switch (type) {
-    case h1:
-      return getTitleElement();
-    default:
-      return getTitleElement();
-  }
-};
+const Title = ({ type = "h1", children, className = "", style }: Title) => (
+  <h1 style={style} className={`title title--${type} ${className}`.trim()}>
+    {children}
+  </h1>
+);
 
 export default Title;

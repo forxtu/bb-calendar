@@ -20,15 +20,13 @@ const Button = ({
   size = "regular",
   children,
   onClick
-}: ButtonProps) => {
-  return (
-    <button
-      onClick={onClick}
-      className={`button button--${type} button-size--${size}`}
-    >
-      {children}
-    </button>
-  );
-};
+}: ButtonProps) => (
+  <button
+    onClick={onClick}
+    className={`button button--${type} button-size--${size}`}
+  >
+    {children}
+  </button>
+);
 
 export default Button;

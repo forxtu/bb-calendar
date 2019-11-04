@@ -12,28 +12,10 @@ type Text = {
   style?: CSSProperties;
 };
 
-const Text = ({ type, children, className = "", style }: Text) => {
-  const types = {
-    regular: "regular",
-    small: "small"
-  };
-
-  const { regular, small } = types;
-
-  const getTextElement = (type: string) => (
-    <p style={style} className={`text text--${type} ${className}`.trim()}>
-      {children}
-    </p>
-  );
-
-  switch (type) {
-    case regular:
-      return getTextElement(regular);
-    case small:
-      return getTextElement(small);
-    default:
-      return getTextElement(regular);
-  }
-};
+const Text = ({ type = "regular", children, className = "", style }: Text) => (
+  <p style={style} className={`text text--${type} ${className}`.trim()}>
+    {children}
+  </p>
+);
 
 export default Text;
