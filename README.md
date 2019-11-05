@@ -1,6 +1,9 @@
+Online demo can be found at https://bb-calendar.forxtu.space or at netlify subdomain https://forxtu-bb-calendar.netlify.com
+
 ## 🐶 Core
 
 - Bootstrapped with Create React App (using TypeScript)
+- Netlify to deploy
 
 ## 🐱 Styling
 
