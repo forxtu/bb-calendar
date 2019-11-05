@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/bb-calendar/static/css/main.20946b74.chunk.css",
+    "main.js": "/bb-calendar/static/js/main.5fdb2f2f.chunk.js",
+    "main.js.map": "/bb-calendar/static/js/main.5fdb2f2f.chunk.js.map",
+    "runtime-main.js": "/bb-calendar/static/js/runtime-main.8b05e7ec.js",
+    "runtime-main.js.map": "/bb-calendar/static/js/runtime-main.8b05e7ec.js.map",
+    "static/js/2.f79153fa.chunk.js": "/bb-calendar/static/js/2.f79153fa.chunk.js",
+    "static/js/2.f79153fa.chunk.js.map": "/bb-calendar/static/js/2.f79153fa.chunk.js.map",
+    "index.html": "/bb-calendar/index.html",
+    "precache-manifest.a94277a63a8d54935873a968f275c091.js": "/bb-calendar/precache-manifest.a94277a63a8d54935873a968f275c091.js",
+    "service-worker.js": "/bb-calendar/service-worker.js",
+    "static/css/main.20946b74.chunk.css.map": "/bb-calendar/static/css/main.20946b74.chunk.css.map",
+    "static/media/main.scss": "/bb-calendar/static/media/GTPressuraMono.b43420dd.ttf",
+    "static/media/calendar.svg": "/bb-calendar/static/media/calendar.0d43b34c.svg",
+    "static/media/van.svg": "/bb-calendar/static/media/van.54ef1ff3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8b05e7ec.js",
+    "static/js/2.f79153fa.chunk.js",
+    "static/css/main.20946b74.chunk.css",
+    "static/js/main.5fdb2f2f.chunk.js"
+  ]
+}
